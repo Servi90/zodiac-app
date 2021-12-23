@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astrology</title>
+    <style>
+      .astroBox {
+        text-align: center;
+        background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        border-radius: 20px;
+        display: block;
+        margin: auto;
+        margin-left: 280px;
+        margin-right: 280px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .star {
+        position: relative;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+      }
+      .constellation {
+        border-radius: 20px;
+        display: block;
+        margin: auto;
+      }
+      h1 {
+        color: azure;
+        text-align: center;
+      }
+      h2 {
+        color: azure;
+        text-align: center;
+        font-weight: lighter;
+      }
+      p {
+        color: azure;
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+      .specialText{
+        color: #bdf9ee;
+        font-weight: inherit; 
+      }
+      hr {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .box {
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #30cacd;
+        padding: 1em;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .buttonFind {
+        text-align: center;
+        font-size: 20px;
+        border-radius: 5px;
+        padding: 20px;
+        display: block;
+        margin: 20px auto;
+        text-decoration: none;
+        transition: all 200ms ease;
+        background: #324487;
+        color: azure;
+        border: azure;  
+      }
+      .buttonFind:hover {
+        background: azure;
+        color: #324487;
+      }
+      .readMore {
+        text-align: center;
+        font-size: 10px;
+        text-decoration: none;
+      }
+      .buttonContact{
+        font-size: 12px;
+        padding: 10px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        background: azure;
+        color:#324487;
+        border: azure;
+        box-shadow: 2px 2px 2px 2px #bdf9ee;
+        transition: all 200ms ease;
+      }
+      .buttonContact:hover{
+        background: #324487;
+        color: azure;
+        border: azure;
+      }
+      .signature{
+        color:#324487;
+        font-size: 12px;
+      } 
+    </style>
+  </head>
+  <body>
+    <div class="astroBox">
+      <h1>
+        <img
+          class="star"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/707/original/Shining_Galaxy.jpg?1632659486"
+          width="400"
+        />
+<div class="replaceable">
+        <div class="box">Western Astrological Signs</div>
+      </h1>
+
+      <h2>Signs meanings and characteristics</h2>
+      <hr />
+      <br/>
+      <img
+        class="constellation"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/710/original/signsall.jpg?1632663966"
+        width="300"
+      />
+      <br/>
+      <hr />
+      <p>
+        In Western astrology, <strong>astrological signs </strong>are the twelve
+        30 degree sectors that make up Earth's 360 degree orbit around the Sun.
+        The signs enumerate from the first day of spring known as the First
+        Point of Aries which is the vernal equinox. The <em>Western astrological signs</em>
+        are <span class="specialText">Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio,
+        Sagittarius, Capricorn, Aquarius and Pisces</span>. The Western zodiac
+        originated in Babylonian astrology, and was later influenced by
+        Hellenistic culture. Each sign was named after a constellation the sun
+        annually moved through while crossing the sky. This observation is
+        emphasized in the simplified and popular sun sign astrology.
+      </p>
+      <a
+        class="readMore"
+        href="https://en.wikipedia.org/wiki/Astrological_sign#:~:text=The%20Western%20astrological%20signs%20are,later%20influenced%20by%20Hellenistic%20culture."
+        target="blank"
+        >Read more
+      </a>
+      <br />
+      <button class="buttonFind" onclick="scrollToTop()">Find out your sign</button>
+      <br />
+      
+      <div class="signature">Coded by Marta Hernandez<button class="buttonContact">Subscribe</button><br/></div>
+      </div>
+      
+    </div>
+    <script>
+      function scrollToTop() {
+            window.scrollTo(0, 0);
+        }
+
+      function findOut(){
+
+        let name = prompt("What is your name?");
+        let day = prompt("What day of the month were you born?");
+        let month=prompt("What month were you born in?");
+
+        month=month.toLowerCase().trim();
+
+        if (month === "december" && day <22){ 
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Sagittarius";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Optimistic - Honest - Intellectual"
+        }
+        if (month === "december" && day >=22){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Capricorn";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Ambitious - Persistent - Disciplined"
+        }
+        if (month === "january" && day <20){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Capricorn";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Ambitious - Persistent - Disciplined"
+        }
+        if (month === "january" && day >=20){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are an Aquarius";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Clever - Exceptional - Self-reliant"
+        }
+        if (month === "february" && day <19){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are an Aquarius";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Clever - Exceptional - Self-reliant"
+        }
+        if (month === "february" && day >=19){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Pisces";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Creative - Generous - Empathetic"
+        }
+        if (month === "march" && day <21){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Pisces";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Creative - Generous - Empathetic"
+        }
+        if (month === "march" && day >=21){
+           let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are an Aries";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Ambitious - Honest - Assertive"
+        }
+        if (month === "april" && day <20){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are an Aries";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Ambitious - Honest - Assertive"
+        }
+        if (month === "april" && day >=20){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Taurus";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Intelligent - Hard-working - Dedicated"
+        }
+        if (month === "may" && day <21){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Taurus";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Intelligent - Hard-working - Dedicated"
+        }
+        if (month === "may" && day >=21){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Gemini";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Adaptable - Outgoing - Impulsive"
+        }
+        if (month === "june" && day <21){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Gemini";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Adaptable - Outgoing - Impulsive"
+        }
+        if (month === "june" && day >=21){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Cancer";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Loyal - Protective - Intuitive"
+        }
+        if (month === "july" && day <23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Cancer";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Loyal - Protective - Intuitive"
+        }
+        if (month === "july" && day >=23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Leo";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Compassion - Drive - Generosity"
+        }
+        if (month === "august" && day <23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Leo";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Compassion - Drive - Generosity"
+        }
+        if (month === "august" && day >=23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Virgo";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Humble - Industrious - Practical"
+        }
+        if (month === "september" && day <23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Virgo";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Humble - Industrious - Practical"
+        }
+        if (month === "september" && day >=23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Libra";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Charming - Intelligent - Persuasive"
+        }
+        if (month === "october" && day <23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Libra";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Charming - Intelligent - Persuasive"
+        }
+        if (month === "october" && day >=23){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Scorpio";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Mysterious - Secretive - Passionate"
+        }
+        if (month === "november" && day <22){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Scorpio";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Mysterious - Secretive - Passionate"
+        }
+        if (month === "november" && day >=22){
+          let replaceable=document.querySelector(".replaceable");
+          replaceable.innerHTML= name + ", you are a Sagittarius";
+          let h2=document.querySelector("h2");
+          h2.innerHTML="Optimistic - Honest - Intellectual"
+        }
+}
+
+let findOutButton=document.querySelector("button");
+findOutButton.addEventListener("click", findOut);
+
+
+function subscribe(){
+
+  let name=prompt("What is your name?");
+  let correo=prompt("What is your email address?")
+  let age=prompt("How old are you?");
+  
+
+  if (age <18){
+    alert("Sorry " + name + ", you must be 18 or older in order to subscribe to our services");
+  } else {
+alert("Thank you " + name + ", we will be in touch shortly");
+  }
+}
+let subscribeButton=document.querySelector(".buttonContact");
+subscribeButton.addEventListener("click", subscribe);
+
+
+    </script>
+  </body>
+</html>
