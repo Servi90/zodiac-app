@@ -1,0 +1,99 @@
+.astroBox {
+  text-align: center;
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  margin-left: 280px;
+  margin-right: 280px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.star {
+  position: relative;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.constellation {
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+}
+h1 {
+  color: azure;
+  text-align: center;
+}
+h2 {
+  color: azure;
+  text-align: center;
+  font-weight: lighter;
+}
+p {
+  color: azure;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.specialText {
+  color: #bdf9ee;
+  font-weight: inherit;
+}
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.box {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #30cacd;
+  padding: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+.buttonFind {
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  display: block;
+  margin: 20px auto;
+  text-decoration: none;
+  transition: all 200ms ease;
+  background: #324487;
+  color: azure;
+  border: azure;
+}
+.buttonFind:hover {
+  background: azure;
+  color: #324487;
+}
+.readMore {
+  text-align: center;
+  font-size: 10px;
+  text-decoration: none;
+}
+.buttonContact {
+  font-size: 12px;
+  padding: 10px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  background: azure;
+  color: #324487;
+  border: azure;
+  box-shadow: 2px 2px 2px 2px #bdf9ee;
+  transition: all 200ms ease;
+}
+.buttonContact:hover {
+  background: #324487;
+  color: azure;
+  border: azure;
+}
+.signature {
+  color: #324487;
+  font-size: 12px;
+}
